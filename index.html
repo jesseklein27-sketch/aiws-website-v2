@@ -590,7 +590,12 @@ var paddleReady=false;
 (function initPaddle(){
  try{
   if(!window.Paddle)return;
-  Paddle.Environment.set('live');
+  /* Do NOT call Paddle.Environment.set('live') — 'live' is not a valid environment.
+     Paddle.js only accepts 'sandbox' or 'production', and production is the default.
+     Passing 'live' made Paddle build its checkout host from that string, so the
+     browser tried to resolve a host literally named "live" and checkout died with
+     a DNS error before it ever opened. Omitting the call entirely is what Paddle
+     recommends for production. */
   Paddle.Initialize({token:'live_db302bdd38da79bfb8ca2fc84d6'});
   paddleReady=true;
  }catch(e){paddleReady=false;}
@@ -600,14 +605,18 @@ function openCheckout(priceId,product){
   alert('The checkout could not load — an ad blocker or network issue may be blocking it.\n\nEmail jesseklein@aisystemswealth.com and you will be sent a direct payment link.');
   return false;
  }
- Paddle.Checkout.open({
-  items:[{priceId:priceId,quantity:1}],
-  settings:{
-   displayMode:'overlay',
-   theme:'dark',
-   successUrl:SUCCESS_URL+'?product='+encodeURIComponent(product)+'&status=success'
-  }
- });
+ try{
+  Paddle.Checkout.open({
+   items:[{priceId:priceId,quantity:1}],
+   settings:{
+    displayMode:'overlay',
+    theme:'dark',
+    successUrl:SUCCESS_URL+'?product='+encodeURIComponent(product)+'&status=success'
+   }
+  });
+ }catch(err){
+  alert('Checkout could not open: '+(err&&err.message?err.message:'unknown error')+'\n\nEmail jesseklein@aisystemswealth.com and you will be sent a direct payment link.');
+ }
  return false;
 }
 function buy(tier){return openCheckout(PRICE_IDS[tier],tier);}
