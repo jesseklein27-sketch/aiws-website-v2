@@ -82,7 +82,7 @@
       return say("Great stage — everything's ahead of you. Honest take: you probably don't need all 153 specialists yet. **Foundation** covers the tactical core — setup, execution, the stuff that actually moves a new business.\n\n"+tierLine(TIERS.foundation)+"\n\nAnd if you outgrow it, your $27 counts toward upgrading later. Nothing wasted.",['Take me to Foundation 🚀','What exactly is inside?','Is there a guarantee?']);
     }
     if(/growing|leverage|scale|scaling/.test(t)){
-      return say("Then you already know the real bottleneck: you're the strategy team *and* the execution team. Most owners at your stage land on **Command** — it adds the strategic layer: diagnostics, frameworks, scaling roadmaps, 90-day plans.\n\n"+tierLine(TIERS.command)+"\n\nThat's 85 specialists for less than a coffee each. It earns its keep fast.",['Show me Command 👑','Why not Elite?','Is there a guarantee?']);
+      return say("Then you already know the real bottleneck: you're the strategy team and the execution team. Most owners at your stage land on **Command** — it adds the strategic layer: diagnostics, frameworks, scaling roadmaps, 90-day plans.\n\n"+tierLine(TIERS.command)+"\n\nThat's 85 specialists for less than a coffee each. It earns its keep fast.",['Show me Command 👑','Why not Elite?','Is there a guarantee?']);
     }
     if(/full arsenal|everything|all of it|complete/.test(t)){
       return say("Then don't piecemeal it. **Elite** is the complete bench — Foundation + Command + 68 institutional-grade specialists covering the full venture lifecycle.\n\n"+tierLine(TIERS.elite)+"\n\nBest math in the lineup, one-time payment, lifetime access. The complete C-suite.",['Take me to Elite 🏅','Compare the tiers','Is there a guarantee?']);
