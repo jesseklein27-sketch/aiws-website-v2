@@ -8,7 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236366F1'/><stop offset='0.5' stop-color='%238B5CF6'/><stop offset='1' stop-color='%23EC4899'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='url(%23g)'/><text x='32' y='43' font-family='Arial,sans-serif' font-size='26' font-weight='800' fill='white' text-anchor='middle'>AI</text></svg>">
+<meta name="theme-color" content="#0B0E17">
+<meta property="og:title" content="AI Wealth Systems — 153+ AI Specialists. One Mission: Your Wealth.">
+<meta property="og:description" content="Fire the agency you were never going to hire anyway. 153 precision-engineered AI specialists, one-time payment, lifetime access.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aisystemswealth.com/">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assistant.css">
 </head>
 <body>
 
@@ -146,7 +153,7 @@
 <!-- FAQ -->
 <section style="background:var(--bg2)"><div class="w">
   <div style="text-align:center"><div class="eb" style="justify-content:center">FAQ</div>
-  <h2 style="font-size:clamp(28px,4vw,42px);font-weight:400;margin-bottom:40px;font-family:'Gloock',serif">Questions, answered.</h2></div>
+  <h2 style="font-size:clamp(28px,4vw,42px);font-weight:400;margin-bottom:40px;font-family='Gloock',serif">Questions, answered.</h2></div>
   <div class="fq2">
     <div class="fi"><div class="fq3">Do I need to be good at AI or "prompt engineering"?</div><div class="fa"><p>No — that's the point. The engineering is done. Each specialist tells you exactly what context to provide, then handles the rest. If you can fill in a blank, you can run the system.</p></div></div>
     <div class="fi"><div class="fq3">Which AI does this work with?</div><div class="fa"><p>Any major chat AI — Claude, ChatGPT, Gemini. The prompts are model-agnostic frameworks. Use whichever you already have.</p></div></div>
@@ -199,12 +206,24 @@
 <div class="scta" id="scta"><span class="tx"><strong>153 AI Specialists</strong> · One-time payment · 14-day refund</span><a class="btn b1" href="#pricing">Build My AI Team — from $27</a></div>
 
 <script src="app.js"></script>
+<script src="assistant.js"></script>
 
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 <script>
-Paddle.Environment.set('live');
-Paddle.Initialize({token:'live_db302bdd38da79bfb8ca2fc84d6'});
+(function(){
+  var tries=0;
+  function boot(){
+    if(window.Paddle&&Paddle.Initialize){
+      try{Paddle.Initialize({token:'live_db302bdd38da79bfb8ca2fc84d6'});window.__paddleReady=true}catch(e){}
+    }else if(tries++<60){setTimeout(boot,200)}
+  }
+  boot();
+})();
 function openCheckout(priceId,productName){
+  if(!window.Paddle||!Paddle.Checkout||!window.__paddleReady){
+    alert('Checkout is still loading — please try again in a few seconds.');
+    return;
+  }
   Paddle.Checkout.open({
     items:[{priceId:priceId,quantity:1}],
     settings:{displayMode:'overlay',theme:'dark',successUrl:'https://aisystemswealth.com/success.html?product='+productName+'&status=success'}
