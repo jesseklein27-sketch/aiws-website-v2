@@ -1,0 +1,7 @@
+
+/* ===== FIX ROUND 3 ===== */
+/* Aria bubble: lift above sticky bar on small screens */
+@media(max-width:768px){
+  #aria-root{bottom:170px}
+  #aria-panel{bottom:236px;height:min(520px,calc(100vh - 320px))}
+}
