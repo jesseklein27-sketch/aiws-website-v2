@@ -32,6 +32,10 @@ setInterval(rc,2600);
 var fqs=document.querySelectorAll('.fq3');
 fqs.forEach(function(q){q.addEventListener('click',function(){var p=this.parentElement;var o=p.classList.contains('o');document.querySelectorAll('.fi').forEach(function(i){i.classList.remove('o')});if(!o)p.classList.add('o')})});
 
-// STICKY
+// STICKY — shows after 500px scroll, hides while pricing is on screen (redundant there)
 var sc=document.getElementById('scta');
-window.addEventListener('scroll',function(){window.scrollY>500?sc.classList.add('sh'):sc.classList.remove('sh')});
+var prc=document.getElementById('pricing');
+var atPricing=false;
+function us(){window.scrollY>500&&!atPricing?sc.classList.add('sh'):sc.classList.remove('sh')}
+if('IntersectionObserver' in window&&prc){new IntersectionObserver(function(en){atPricing=en[0].isIntersecting;us()}).observe(prc)}
+window.addEventListener('scroll',us);
