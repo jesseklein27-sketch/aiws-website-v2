@@ -39,3 +39,7 @@ var atPricing=false;
 function us(){window.scrollY>500&&!atPricing?sc.classList.add('sh'):sc.classList.remove('sh')}
 if('IntersectionObserver' in window&&prc){new IntersectionObserver(function(en){atPricing=en[0].isIntersecting;us()}).observe(prc)}
 window.addEventListener('scroll',us);
+
+// CONTACT nav link — mailto can't be crawled by email scrapers, so compose at click time
+var cl=document.querySelector('a[href="#contact"]');
+if(cl){cl.addEventListener('click',function(e){e.preventDefault();window.location.href='mailto:'+'jesseklein'+'@'+'aisystemswealth.com'})}
