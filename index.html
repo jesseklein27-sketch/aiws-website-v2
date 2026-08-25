@@ -166,13 +166,12 @@
 <section id="free-vault"><div class="w">
   <div class="ecap">
     <h3>Not ready to buy yet?</h3>
-    <p>Get 5 free Foundation-tier prompts delivered to your inbox. No spam. Unsubscribe anytime.</p>
-    <form class="ecf" name="free-prompts" method="POST" data-netlify="true" onsubmit="event.preventDefault();var f=this;fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()}).then(function(){f.style.display='none';document.getElementById('ecf-ok').style.display='block'}).catch(function(){f.submit()});return false">
+    <p>Get 3 free Foundation-tier specialists delivered to your inbox. No spam. Unsubscribe anytime.</p>
+    <form class="ecf" name="free-prompts" method="POST" action="/thanks.html" data-netlify="true">
       <input type="hidden" name="form-name" value="free-prompts">
       <input type="email" name="email" placeholder="Enter your email" required>
-      <button type="submit" class="btn b1">Send Me Free Prompts</button>
+      <button type="submit" class="btn b1">Send Me Free Specialists</button>
     </form>
-    <p id="ecf-ok" style="display:none;color:#34A853;font-weight:600;margin-top:16px">✓ You're in — check your inbox shortly.</p>
   </div>
 </div></section>
 
