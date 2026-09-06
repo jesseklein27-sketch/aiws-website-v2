@@ -5,3 +5,8 @@
   #aria-root{bottom:170px}
   #aria-panel{bottom:236px;height:min(520px,calc(100vh - 320px))}
 }
+
+/* ===== FIX ROUND 4 ===== */
+/* Kill horizontal overflow: page rendered wider than mobile screens,
+   clipping the hero headline and leaving dead space on the right */
+html,body{overflow-x:hidden;max-width:100%}
