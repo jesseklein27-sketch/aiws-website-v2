@@ -10,3 +10,11 @@
 /* Kill horizontal overflow: page rendered wider than mobile screens,
    clipping the hero headline and leaving dead space on the right */
 html,body{overflow-x:hidden;max-width:100%}
+
+/* ===== FIX ROUND 5 ===== */
+/* Urgency bar restyle: obsidian band + gold frame (replaces pink gradient).
+   Height kept near-identical so sticky nav offset (top:40px) stays correct. */
+.urgency{background:#0B0E17;border-bottom:1px solid rgba(196,161,90,.45);color:#E7E9EE;padding:9px 20px}
+.urgency .c{background:rgba(196,161,90,.08);border:1px solid rgba(196,161,90,.55);color:var(--brass2);border-radius:100px;padding:2px 14px;font-weight:700}
+.urgency a{color:var(--brass2)!important;text-decoration:none!important;font-weight:700;border-bottom:1px solid rgba(196,161,90,.6);padding-bottom:1px}
+.urgency a:hover{color:#F1D9A8;opacity:1}
