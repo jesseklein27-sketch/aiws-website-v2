@@ -18,3 +18,8 @@ html,body{overflow-x:hidden;max-width:100%}
 .urgency .c{background:rgba(196,161,90,.08);border:1px solid rgba(196,161,90,.55);color:var(--brass2);border-radius:100px;padding:2px 14px;font-weight:700}
 .urgency a{color:var(--brass2)!important;text-decoration:none!important;font-weight:700;border-bottom:1px solid rgba(196,161,90,.6);padding-bottom:1px}
 .urgency a:hover{color:#F1D9A8;opacity:1}
+
+/* ===== FIX ROUND 6 ===== */
+/* Palette re-anchor: brand gradient text violet->pink becomes teal->gold (logo palette).
+   Redefines --gt used by hero headline, .gt and .pc .hl. Loaded after styles.css, so it wins. */
+:root{--gt:linear-gradient(135deg,#10B981,#C4A15A)}
