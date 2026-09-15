@@ -3,9 +3,9 @@
   if(window.__ariaLoaded)return;window.__ariaLoaded=true;
 
   var TIERS={
-    foundation:{name:'Foundation',price:'$27',count:47,per:'$0.57',pid:'pri_01kxb77mt63bhgfh0z7p8w7fjz',key:'foundation'},
-    command:{name:'Command',price:'$67',count:85,per:'$0.79',pid:'pri_01kxb7h8h5e39dd1ahdxxx68vt',key:'command'},
-    elite:{name:'Elite',price:'$147',count:153,per:'$0.96',pid:'pri_01kxb7qaj29g148xzmh105egc0',key:'elite'}
+    foundation:{name:'Foundation',price:'$19',count:47,per:'$0.40',pid:'pri_01kxb77mt63bhgfh0z7p8w7fjz',key:'foundation'},
+    command:{name:'Command',price:'$39',count:85,per:'$0.46',pid:'pri_01kxb7h8h5e39dd1ahdxxx68vt',key:'command'},
+    elite:{name:'Elite',price:'$85',count:153,per:'$0.56',pid:'pri_01kxb7qaj29g148xzmh105egc0',key:'elite'}
   };
 
   /* ---------- DOM ---------- */
@@ -79,7 +79,7 @@
 
     // --- guided flows ---
     if(/starting out|just start|new business|beginner|first business/.test(t)){
-      return say("Great stage — everything's ahead of you. Honest take: you probably don't need all 153 specialists yet. **Foundation** covers the tactical core — setup, execution, the stuff that actually moves a new business.\n\n"+tierLine(TIERS.foundation)+"\n\nAnd if you outgrow it, your $27 counts toward upgrading later. Nothing wasted.",['Take me to Foundation 🚀','What exactly is inside?','Is there a guarantee?']);
+      return say("Great stage — everything's ahead of you. Honest take: you probably don't need all 153 specialists yet. **Foundation** covers the tactical core — setup, execution, the stuff that actually moves a new business.\n\n"+tierLine(TIERS.foundation)+"\n\nAnd if you outgrow it, your $19 counts toward upgrading later. Nothing wasted.",['Take me to Foundation 🚀','What exactly is inside?','Is there a guarantee?']);
     }
     if(/growing|leverage|scale|scaling/.test(t)){
       return say("Then you already know the real bottleneck: you're the strategy team and the execution team. Most owners at your stage land on **Command** — it adds the strategic layer: diagnostics, frameworks, scaling roadmaps, 90-day plans.\n\n"+tierLine(TIERS.command)+"\n\nThat's 85 specialists for less than a coffee each. It earns its keep fast.",['Show me Command 👑','Why not Elite?','Is there a guarantee?']);
@@ -89,10 +89,10 @@
     }
 
     // --- tier picks from chips/buttons ---
-    if(/take me to foundation|get foundation/.test(t))return say("Smart start. [Get Foundation — $27 ⚡|checkout:foundation]\n\nOne-time payment, instant Notion delivery. You could be running your first specialist in 10 minutes.");
-    if(/show me command|get command/.test(t))return say("Good instinct. [Get Command — $67 👑|checkout:command]\n\n85 specialists, one-time, yours forever. Checkout takes about 60 seconds.");
-    if(/take me to elite|get elite/.test(t))return say("Going all in — respect. [Get Elite — $147 🏅|checkout:elite]\n\nAll 153 specialists. One payment, lifetime access, 14-day refund if it's not for you.");
-    if(/why not elite/.test(t))return say("Fair question. If budget allows, Elite is objectively the best value — $0.96/specialist for the full 153. But Command covers strategy + execution for most growing businesses, and your $67 counts toward Elite if you upgrade. There's no wrong door here.",['Take me to Elite 🏅','Show me Command 👑']);
+    if(/take me to foundation|get foundation/.test(t))return say("Smart start. [Get Foundation — $19 ⚡|checkout:foundation]\n\nOne-time payment, instant Notion delivery. You could be running your first specialist in 10 minutes.");
+    if(/show me command|get command/.test(t))return say("Good instinct. [Get Command — $39 👑|checkout:command]\n\n85 specialists, one-time, yours forever. Checkout takes about 60 seconds.");
+    if(/take me to elite|get elite/.test(t))return say("Going all in — respect. [Get Elite — $85 🏅|checkout:elite]\n\nAll 153 specialists. One payment, lifetime access, 14-day refund if it's not for you.");
+    if(/why not elite/.test(t))return say("Fair question. If budget allows, Elite is objectively the best value — $0.56/specialist for the full 153. But Command covers strategy + execution for most growing businesses, and your $39 counts toward Elite if you upgrade. There's no wrong door here.",['Take me to Elite 🏅','Show me Command 👑']);
     if(/compare|which tier|difference between|vs/.test(t))return say("Quick map:\n\n"+tierLine(TIERS.foundation)+" — tactical execution core\n"+tierLine(TIERS.command)+" — adds strategy, diagnostics, 90-day plans\n"+tierLine(TIERS.elite)+" — adds 68 institutional-grade specialists, full lifecycle\n\nRule of thumb: start where your business is, not where your ambition is. Upgrades always count what you already paid.",['🌱 Just starting out','📈 Growing, need leverage','🏆 Want the full arsenal']);
     if(/what.*inside|what exactly|what do i get|what's in it/.test(t))return say("Every specialist is a full reasoning architecture — defined persona, diagnostic questions, step-by-step methodology, and an enforced output format. You get structured deliverables, not chatbot rambling. They deploy into your Notion in one click and work with ChatGPT, Claude, or Gemini.",['🌱 Just starting out','📈 Growing, need leverage','🏆 Want the full arsenal']);
 
