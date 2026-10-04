@@ -1,8 +1,3 @@
-// COUNTDOWN
-function dl(){return new Date('2026-09-25T23:59:59+03:00').getTime()}
-function uc(){var e=dl(),n=new Date().getTime(),t=e-n;if(t<=0){document.getElementById('cd').textContent='00 d : 00 h : 00 m : 00 s';return}var d=Math.floor(t/864e5),h=Math.floor(t%864e5/36e5),m=Math.floor(t%36e5/6e4),s=Math.floor(t%6e4/1e3);document.getElementById('cd').textContent=String(d).padStart(2,'0')+' d : '+String(h).padStart(2,'0')+' h : '+String(m).padStart(2,'0')+' m : '+String(s).padStart(2,'0')+' s'}
-uc();setInterval(uc,1000);
-
 // ANIMATED ROSTER
 var roster=[
   {n:'Meta Ads Specialist',d:'Marketing Department'},
@@ -31,7 +26,7 @@ setInterval(rc,2600);
 
 // FAQ
 var fqs=document.querySelectorAll('.fq3');
-fqs.forEach(function(q){q.addEventListener('click',function(){var p=this.parentElement;var o=p.classList.contains('o');document.querySelectorAll('.fi').forEach(function(i){i.classList.remove('o')});if(!o)p.classList.add('o')})});
+fqs.forEach(function(q){q.addEventListener('click',function(){var p=this.parentElement;var o=p.classList.contains('o');document.querySelectorAll('.fi').forEach(function(i){i.classList.remove('o');i.querySelector('.fq3').setAttribute('aria-expanded','false');i.querySelector('.fa').inert=true});if(!o){p.classList.add('o');p.querySelector('.fa').inert=false;this.setAttribute('aria-expanded','true')}})});
 
 // STICKY — shows after 500px scroll, hides while pricing is on screen (redundant there)
 var sc=document.getElementById('scta');
@@ -41,6 +36,6 @@ function us(){window.scrollY>500&&!atPricing?sc.classList.add('sh'):sc.classList
 if('IntersectionObserver' in window&&prc){new IntersectionObserver(function(en){atPricing=en[0].isIntersecting;us()}).observe(prc)}
 window.addEventListener('scroll',us);
 
-// CONTACT nav link — mailto can't be crawled by email scrapers, so compose at click time
+// Contact link
 var cl=document.querySelector('a[href="#contact"]');
 if(cl){cl.addEventListener('click',function(e){e.preventDefault();window.location.href='mailto:'+'jesseklein'+'@'+'aisystemswealth.com'})}

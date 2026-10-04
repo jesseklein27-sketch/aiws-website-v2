@@ -11,15 +11,21 @@
    clipping the hero headline and leaving dead space on the right */
 html,body{overflow-x:hidden;max-width:100%}
 
-/* ===== FIX ROUND 5 ===== */
-/* Urgency bar restyle: obsidian band + gold frame (replaces pink gradient).
-   Height kept near-identical so sticky nav offset (top:40px) stays correct. */
-.urgency{background:#0B0E17;border-bottom:1px solid rgba(196,161,90,.45);color:#E7E9EE;padding:9px 20px}
-.urgency .c{background:rgba(196,161,90,.08);border:1px solid rgba(196,161,90,.55);color:var(--brass2);border-radius:100px;padding:2px 14px;font-weight:700}
-.urgency a{color:var(--brass2)!important;text-decoration:none!important;font-weight:700;border-bottom:1px solid rgba(196,161,90,.6);padding-bottom:1px}
-.urgency a:hover{color:#F1D9A8;opacity:1}
-
 /* ===== FIX ROUND 6 ===== */
 /* Palette re-anchor: brand gradient text violet->pink becomes teal->gold (logo palette).
    Redefines --gt used by hero headline, .gt and .pc .hl. Loaded after styles.css, so it wins. */
 :root{--gt:linear-gradient(135deg,#10B981,#C4A15A)}
+
+/* Truthful checkout and keyboard access */
+button,input{font:inherit}
+:focus-visible{outline:3px solid var(--brass2);outline-offset:4px}
+.fq3{width:100%;text-align:left;border:0;background:transparent}
+.offer-note{text-align:center;color:var(--text-muted);max-width:760px;margin:28px auto 0}
+.checkout-message{position:fixed;bottom:120px;left:50%;transform:translateX(-50%);z-index:400;max-width:calc(100vw - 32px);width:560px;overflow-wrap:anywhere;text-align:center;background:var(--bg2);color:var(--text);border:1px solid var(--brass);border-radius:12px;padding:16px}
+.checkout-message:empty{display:none}
+.btn:disabled{opacity:.65;cursor:wait}
+body{padding-bottom:100px}
+@media(max-width:480px){.nav-in{padding:0 12px;gap:8px}.logo{font-size:13px;gap:6px}.nc{padding:9px 12px;font-size:13px}.btn{max-width:100%;white-space:normal}.scta .btn{font-size:14px}.fcta .btn{padding:14px 18px!important}.ecap{padding:24px 16px}.checkout-message{bottom:140px}#aria-panel{min-height:0;bottom:140px;height:calc(100dvh - 170px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+.ecf input:focus-visible{outline:3px solid var(--brass2);outline-offset:4px}
