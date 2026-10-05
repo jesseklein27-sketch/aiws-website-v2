@@ -24,13 +24,13 @@
 <!-- B) Three Ad Angles -->
 <text x="40" y="312" font-family="Georgia,'Times New Roman',serif" font-size="15.5" fill="#D9A441" letter-spacing="0.3">B) Three Ad Angles</text>
 <text x="40" y="337" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#C9C7C2">1) Problem/Solution:  "Breakouts ruining your mornings? Calm, clear</text>
-<text x="40" y="359.5" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#C9C7C2">   skin in 7 days — dermatologist-formulated."</text>
+<text x="40" y="359.5" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#C9C7C2">   skin care guided by your product evidence."</text>
 <text x="40" y="382.0" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#7a7873">   Visual:  Split-screen before/after — irritated skin vs. clear glow</text>
-<text x="40" y="404.5" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#C9C7C2">2) Social Proof:  "4.9 stars from 2,300+ customers — my skin in two</text>
-<text x="40" y="427.0" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#C9C7C2">   weeks, unreal."</text>
+<text x="40" y="404.5" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#C9C7C2">2) Social Proof:  "Use a verified customer review here — include</text>
+<text x="40" y="427.0" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#C9C7C2">   only claims supported by permission and evidence."</text>
 <text x="40" y="449.5" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#7a7873">   Visual:  UGC-style selfie review with results overlay</text>
-<text x="40" y="472.0" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#C9C7C2">3) Offer:  "Starter kit $29 — free shipping this week only."</text>
-<text x="40" y="494.5" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#7a7873">   Visual:  Product flat-lay, price lockup, urgency ribbon</text>
+<text x="40" y="472.0" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#C9C7C2">3) Offer:  "Starter kit — insert verified price and terms."</text>
+<text x="40" y="494.5" font-family="'Courier New',Courier,monospace" font-size="12.8" fill="#7a7873">   Visual:  Product flat-lay, price lockup, clear product terms</text>
 
 <!-- C) Testing Budget -->
 <text x="40" y="534" font-family="Georgia,'Times New Roman',serif" font-size="15.5" fill="#D9A441" letter-spacing="0.3">C) Testing Budget Allocation</text>
@@ -47,8 +47,8 @@
 
 <!-- Footer -->
 <line x1="40" y1="800" x2="780" y2="800" stroke="#262626"/>
-<text x="40" y="830" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="10.5" fill="#55534f">Structured output · PROMPTOS-scored 9.2/10</text>
+<text x="40" y="830" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="10.5" fill="#55534f">Illustrative output · Not a performance guarantee</text>
 <circle cx="262" cy="826.5" r="3.5" fill="#8B5CF6"/>
-<text x="276" y="830" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="10.5" fill="#55534f">Excerpt — full brief continues in your workspace</text>
+<text x="276" y="830" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="10.5" fill="#55534f">Example planning assumptions · Review before use</text>
 <text x="780" y="830" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="10.5" fill="#55534f" text-anchor="end">aisystemswealth.com</text>
 </svg>
